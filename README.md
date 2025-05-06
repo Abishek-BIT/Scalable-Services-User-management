@@ -37,3 +37,25 @@ user-service/
 ├── .env # Environment variables
 ├── package.json # Node.js dependencies
 └── docker-compose.yml # Local dev with MongoDB
+
+
+yaml
+
+## ⚙️ Environment Variables
+
+Create a `.env` file in the root directory:
+
+env
+PORT=5000
+MONGO_URI=mongodb://mongo:27017/userdb
+JWT_SECRET=your_jwt_secret
+
+Test the API
+
+Base URL: http://localhost:5000
+| Method | Endpoint      | Description             |
+| ------ | ------------- | ----------------------- |
+| POST   | /api/register | Register a new user     |
+| POST   | /api/login    | Login and receive JWT   |
+| GET    | /api/profile  | Get user profile (auth) |
+
